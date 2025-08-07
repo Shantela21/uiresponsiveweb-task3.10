@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Converter Hub</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav1 class="navbar">
+    <header><strong>Portfolio</strong></header>
+    <div class="logo"></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contactus.html">Contact</a></li>
+    </ul>
+  </nav1>
+  <!-- Tab Navigation -->
+  <nav>
+    <button class="tab-button active" data-tab="file-transfer">File Transfer</button>
+    <button class="tab-button" data-tab="temperature">Temperature</button>
+    <button class="tab-button" data-tab="scientific">Scientific Notation</button>
+    <button class="tab-button" data-tab="metric-prefix">Metric Prefix</button>
+  </nav>
+  <main>
+    <!-- File Transfer -->
+    <section id="file-transfer" class="tab-content active">
+      <h2>File Transfer Calculator</h2>
+      <label>File Size:
+        <input type="number" id="fileSize" placeholder="Enter size">
+        <select id="fileUnit">
+          <option value="1">Bytes</option>
+          <option value="1024">KB</option>
+          <option value="1048576">MB</option>
+          <option value="1073741824">GB</option>
+        </select>
+      </label>
+      <label>Speed:
+        <input type="number" id="speed" placeholder="Enter speed">
+        <select id="speedUnit">
+          <option value="1">Bps</option>
+          <option value="1024">KBps</option>
+          <option value="1048576">MBps</option>
+          <option value="1073741824">GBps</option>
+        </select>
+      </label>
+      <button onclick="calculateTransfer()">Calculate</button>
+      <p id="transferResult"></p>
+    </section>
+    <!-- Temperature Converter -->
+    <section id="temperature" class="tab-content">
+      <h2>Temperature Converter</h2>
+      <label>Value:
+        <input type="number" id="tempInput" placeholder="Enter temperature">
+      </label>
+      <select id="tempUnit">
+        <option value="C">Celsius to Fahrenheit</option>
+        <option value="F">Fahrenheit to Celsius</option>
+      </select>
+      <button onclick="convertTemperature()">Convert</button>
+      <p id="tempResult"></p>
+    </section>
+    <!-- Scientific Notation -->
+    <section id="scientific" class="tab-content">
+      <h2>Scientific Notation Converter</h2>
+      <label>Number:
+        <input type="number" id="sciInput" placeholder="Enter number">
+      </label>
+      <button onclick="convertScientific()">Convert</button>
+      <p id="sciResult"></p>
+    </section>
+    <!-- Metric Prefix -->
+    <section id="metric-prefix" class="tab-content">
+      <h2>Metric Prefix Converter</h2>
+      <label>Value:
+        <input type="number" id="metricInput" placeholder="Enter value">
+      </label>
+      <select id="metricFrom">
+        <option value="1000000">Mega</option>
+        <option value="1000">Kilo</option>
+        <option value="1">Base</option>
+        <option value="0.001">Milli</option>
+        <option value="0.000001">Micro</option>
+      </select>
+      to
+      <select id="metricTo">
+        <option value="1000000">Mega</option>
+        <option value="1000">Kilo</option>
+        <option value="1">Base</option>
+        <option value="0.001">Milli</option>
+        <option value="0.000001">Micro</option>
+      </select>
+      <button onclick="convertMetric()">Convert</button>
+      <p id="metricResult"></p>
+    </section>
+  </main>
+
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-section">© 2025 MySite</div>
+    <div class="footer-section">
+       <div class="footer-section">
+        <a href="contactus.html" style="color: white; text-decoration: underline;">Contact us |
+        <a href="privacy.html" style="color: white; text-decoration: underline;">Privacy Policy
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
